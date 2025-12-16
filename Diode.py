@@ -13,7 +13,6 @@ def SiDiodeBiased():
     img[0].set_xlabel("Tensiune curentului (V)")
     img[0].set_ylabel("Intensitatea curentului (mA)")
     img[0].grid()
-    #plt.show()
 
 def LEDBiased():
 
@@ -28,9 +27,8 @@ def LEDBiased():
     img[1].set_xlabel("Tensiune curentului (V)")
     img[1].set_ylabel("Intensitatea curentului (mA)")
     img[1].grid()
-    img[1].set_xlim(-3, 3)  # Extends the x-axis to the right past 0
-    img[1].set_ylim(-1.3, 1.3) # Extends the y-axis above 0
-    #plt.show()
+    img[1].set_xlim(-3, 3)
+    img[1].set_ylim(-1.3, 1.3)
 
 def SiDiodeReverseBiased():
 
@@ -39,19 +37,18 @@ def SiDiodeReverseBiased():
 
     img[2].plot(XPlot, YPlot, marker='v', color='orange')
 
-# Add these lines to center the origin
-    img[2].set_xlim(-9.5, 9.5)  # Extends the x-axis to the right past 0
-    img[2].set_ylim(-1.2, 1.2) # Extends the y-axis above 0
+    img[2].set_xlim(-9.5, 9.5)
+    img[2].set_ylim(-1.2, 1.2)
 
     img[2].set_title("Caracteristica tensiune-curent\nDioda Zener de siliciu cu polarizare inversa")
     img[2].set_xlabel("Tensiune curentului (V)")
     img[2].set_ylabel("Intensitatea curentului (mA)")
     img[2].grid()
-#plt.show()
 
 SiDiodeBiased()
 LEDBiased()
 SiDiodeReverseBiased()
 plt.show()
+
 
 
