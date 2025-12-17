@@ -26,7 +26,7 @@ def CaracteristicaTransfer():
     img[1].set_xlabel('Intensitatea IB(μA)')
     img[1].set_ylabel('Intensitatea IC(mA)')
     img[1].grid()
-    print(coefficients[0])
+    print("Beta = " + str(coefficients[0]))
 
 def CaracteristicaIesire():
     VCE = [[0.03],[0.06],[0.09],[0.12],[0.15],[0.18],[0.21],[1],[3],[5],[9],[12]]

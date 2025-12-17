@@ -117,7 +117,8 @@ def AmplificatorInversor():
     [ 8.30],
     [ 8.30]])
 
-    plt.plot(Vin, Vout, marker='o', color='purple')
+    plt.plot(Vin, Vout, color='orange')
+    plt.scatter(Vin, Vout, c = 'purple')
     plt.title("Caracteristica amplificatorului inversor")
     plt.xlabel("Tensiunea de intrare (V)")
     plt.ylabel("Tensiunea de iesire (V)")

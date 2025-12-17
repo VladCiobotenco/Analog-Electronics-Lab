@@ -28,14 +28,13 @@ def CaracteristicaFrecventei():
 
     Vi = np.array([0.81,1.8,1.9,1.9,1.97,1.96,1.97,1.95,1.82,1.87,1.83,1.77,0.001,0.0003], dtype=float)
     Vo = np.array([2.3,4.2,5.2,5.9,6.27,6.28,5.52,2.20,1.61,1.14,0.1,1.01,0.02,0.02], dtype=float)
-    A=Vo/Vi
+    A=np.abs(Vo/Vi)
     frecv = np.array([2,3,5,10,100,1e3,1e4,1e5,5e5,7e5,9e5,1e6,3e6,5e6], dtype=float)
-    A_db = 20 * np.log10(A)
-    img[1].semilogx(frecv, A_db)
-    #plt.scatter(np.log(frecv),np.log(A))
+    img[1].plot(np.log(frecv), np.log(A))
+    plt.scatter(np.log(frecv),np.log(A))
     img[1].set_title('Caracteristica de frecventa')
     img[1].set_xlabel('Frecventa (Hz)')
-    img[1].set_ylabel('Amplitudinea in dB')
+    img[1].set_ylabel('Amplificarea')
     img[1].grid()
 
 CaracteristicaAmplitudinii()
